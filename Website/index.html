@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+<style>
+    #scroll-smooth
+    {
+        scroll-behavior: smooth;
+    }
+</style>
+</head>
+
+<body>
+  <header>
+  
+    <nav class="navbar navbar-expand-sm bg-white navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img class="w-25" src="data:image/png;base64,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" alt="swiggy logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><u>Other</u> Dumas,Gujarat,India</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item mx-4">
+                  <a class="nav-link" href="#"><i class="bi bi-search me-2"></i> Search</a>
+                </li>  
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="#">Offers<sup class="text-warning"><strong>New</strong></sup></a>
+                </li> 
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="#"><em class="bi bi-info-circle me-2"></em>Help</a>
+                  </li> 
+                  <li class="nav-item mx-4">
+                    <a class="nav-link" href="#"><em class="bi bi-person me-2"></em>Sign In</a>
+                  </li> 
+                  <li class="nav-item mx-4">
+                    <a class="nav-link" href="#"><em class="bi bi-handbag me-2"></em>Cart</a>
+                  </li> 
+              </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+  </header>
+  <main>
+    <div id="carouselExampleControls" class="75 bg-black carousel slide mx-auto" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="h-25 me-5 ms-5" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" class="d-block w-100" alt="...">
+            <img class="h-25 me-5 ms-4" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/yparhmxrby5lv0ubsel4" class="d-block w-100" alt="...">
+            <img class="h-25 me-5 ms-4" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/s5ug2key6e2sptaxku5v" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img class="h-25 me-5 ms-5" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/yparhmxrby5lv0ubsel4" class="d-block w-100" alt="...">
+            <img class="h-25 me-5 ms-4" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/s5ug2key6e2sptaxku5v" class="d-block w-100" alt="...">
+            <img class="h-25 me-5 ms-4" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ifi2lbzxeu1hvsqrsip3" class="d-block w-100" alt="...">
+          </div>          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+<div class="row">
+<nav class="navbar navbar-expand-sm bg-white navbar-light border-bottom mb-5">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h1><strong>143 restaurants</strong></h1></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mx-5">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Relevance</a>
+            </li>  
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#">Delivery Time<sup class="text-warning"></a>
+            </li> 
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#">Rating</a>
+              </li> 
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">Cost:Low To High</a>
+              </li> 
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">Cost:High To Low</a>
+              </li> 
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">Filters</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="row mb-3">
+
+            <!-- *************************************************************************Item1************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item1 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/l7z6xuzelu9zotumvpk5" alt=""><!-- Food -->
+                        <p><strong>Atul Bakery</strong></p>
+                        <p><small>Desserts</small></p>
+                        <div class="d-flex bg-light">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt="">  <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.2</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>26 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹250 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+            
+<!-- *************************************************************************Item2************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item2 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rprjqll7yxg6txyhjrqz" alt=""><!-- Food -->
+                        <p><strong>Mummy Meals</strong></p>
+                        <p><small>North Indian, Home Food, Healthy Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""> <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>42 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item3************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item3 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wivd5l2pzs68tbxyrkqf" alt=""><!-- Food -->
+                        <p><strong>Gangour</strong></p>
+                        <p><small>North Indian, Fast Food, Street Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.7</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>44 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹150 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item4************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item4 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dgk4obiml7wgzzlx0twg" alt=""><!-- Food -->
+                        <p><strong>Madhi Ni Khamani</strong></p>
+                        <p><small>Indian, Snacks</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>30 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+        </div><!-- Row over -->
+        
+        <div class="row mb-3">
+
+            <!-- *************************************************************************Item1************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item1 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/l7z6xuzelu9zotumvpk5" alt=""><!-- Food -->
+                        <p><strong>Atul Bakery</strong></p>
+                        <p><small>Desserts</small></p>
+                        <div class="d-flex bg-light">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt="">  <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.2</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>26 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹250 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+            
+<!-- *************************************************************************Item2************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item2 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rprjqll7yxg6txyhjrqz" alt=""><!-- Food -->
+                        <p><strong>Mummy Meals</strong></p>
+                        <p><small>North Indian, Home Food, Healthy Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""> <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>42 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item3************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item3 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wivd5l2pzs68tbxyrkqf" alt=""><!-- Food -->
+                        <p><strong>Gangour</strong></p>
+                        <p><small>North Indian, Fast Food, Street Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAADfCAMAAADcKv+WAAAAhFBMVEX39/flfj/39PLlfjz4/P73+frkdSvlfDvkdi7keTXkeDLlejj4+vz4/P/27+vkejbz39T16OHpmWznjVjy1MXqpH7mhEfolWbssJDx0sHuvaPqoXnvwqvwyLT05t7y2cvmgkXokF7ts5XmiE/ol2nwzLntuZ3rrInpnXPsspPuv6fjbxt6IEwNAAAH30lEQVR4nO2di1qjMBCFSzshFBBa613bqrWtuu//fpu66hZIQgbI9eO8QBnzyyFwZjKZjBo1atSoUaNGjeqh6dT2FegWWTzltq9Bs+D1Emxfg2aRXVrYvga9Ips42RPbV6FVcJhnj2GTSlY0mgV9TyWbJIqS+5BJhYc0irLrkEnNX2gU0ShgUsmSLSIj9SpcUuHzq8SQSYUTpydSbV+INn1zykjdhkpq/vRdYnkMlVS4pf9KpFGgq0iKOPpWHCip+Tr9KbG8C5NUuKQ/JdKbMFex+F1ERuoixBrzffK/xPlriKTCe/a/RLoLcRWLMorCJpWcc8pIPYRHKjxm5yXSVXirOKVRRckmtBrJfVItMTxS4TqrlkhXoZU4nUU1hUYquUrqJaafYS0jHLN6ifQlrBInZb1C5v7LkEgl2wanjNSgPsPBkbOK9DYkUklEmyVGcREOqWQRcyqM0nU4pMIdh1NG6ls4pJIbHqfM/YMhVcBpSKTC65xfYhZMtIHs+JyyZQwk2iDklP0zBhJtgIOAU0bqexikgpBTRmoQH4zJRshpKNEGeBByykgNIoQj45Qto+3LG0BkKeE0jGhD/pnKSgwh2vAdYRAq9X4Vzz4Nh0rqb4RBSKr30YbfCINI3odwWjn1P4RzFmEQyfcQDry1cMpIffZ6FUnBeX9al98fjBU4jaK51yGcs6iNhFSvQziFwiKye6rHpNYiDEJSPQ7hVKI2MlL9LXGqxKnPpCpy6nO0oRa1kZC687VEVU6Z+3sabWhEbcIjtRG1kZC68vP7TTNqI5afIRxO1EYsP0M4F82ojYRUP0M43AiDkFQPQzjcqI2EVA9DONyojYRUH0M4zxhO2TJ6RyqS0xOp2pexmA6qCY7TE6lk2CtoxAjIOilnQwqH6anGQX++TNYN8GGzS9GX5apouttwuCeTYxxIjTQ+Tvg3L7jPEA8k7ior74W3LihukfdBF5XcFpKbM4EH32Gl8QHkDnuxuJEELNzX/GZxIS3wtJDTx9bvZe4qfpyqPCTB2ldYabxugfS3xuVK+cWSS0p3S+WHQELu/FtIZoYE8yQPVzPPLDKbXSGf4/PizSuLlJshXwQO/sDaboZ8gTcWOX9edNxskum1FxapaIaChVy7v8GiqaoZCmp03iLTFW9niJHjFineGaIW0mGLlO0MMXLXIruYIV9sF5k4CCtNDvlw715d3EWyneGgb17ds8heZsiXWxZJk35mKKhx+eKMRfY3Q77I5MMNi6Tx3QBmyJcbFpnNhjFDvvLi0rpFDmeGfFl/0cp2hgOaIV+w2Fm0SJXXpP1l0yI1mCFfsJ9buev03RmiarRikbrMkC9CXk3fdZgZol6T9hdsZ8iP+f2UUexr0v7Ki3eDFpm8FRaiRwSeTO0iafyg3Qz5utiY2UV2f03aX2RiwiLjR20P3SqCfarZIk9maLHAU43Fi9a7TrpS/2aoS1ot0rwZ8qXPIrPSvBnylU/17CJ17wwx0mKRzAyNPXSrCDbSYSFdKtzZM0O+YDEwq+m9gb0vStKpNl3k3nwRWA39z5jaLqmmlqk2XeTafJGWqTZd5BqpbVNtuojaLqoihWkheLk1X6R1qk0XuTVfpHWqTRc5NQlHC6duHfKjNC0EL5cO+VGYatNFDk3CUZpq00XuTMLJ15pKnH+4QipcanpFRZ9dKXGq7QWVK6QqTwvBy5VJOIpTbbrIGVI1vhF3Y74IYloIXm7MF1GeatNFjkzC0fpN3AVSUdNC8Jo/2F9GxFSbLnLiOCrEVJsusn/Ij2ZOT5NwbM8XQU216SIHJuGgptp0ke1JOOhpIRHFrrrtSTjIqTZsTd6vkX8U25NwCG6qDU0fcljPkZNwrB7yQ3Cf3P6lSWGDazWze8gP3GE+uf2kSZEDS+ySmiM4PQ/QwD0mR59YPOQHw2k1TQqYVjObpAoPkGqo0VpByEE5AWHzOKpccNBZ8yI5TfeIbmx7h/xIDpCqih+gUR9YYu84KskBUucSB2hUW83sHUclPujsXLI+Q9Vu7NISqWSjclOMr2WtFYrd2LaOo1LhtD1NClcKD+a2jqPK26M2KmlSpW7smRVS2zlVTJOqtJrZCeFAW9RGfQJNeze2nRBOW9QmuVRvrWhtNaORBVLJUrqI2NYK2Mst0gap8qgNvrWixSLLo/nsppTTLq0VJJdZJJ3pKEJ+QZIIQ9fWCmmO3nxcTMJp99YKWTe2+biYMBLWq7WCwKdoF2k8hCPkFD+OrSrxLtJ0tEEUCevfZyhsNTN9HBU/ajNMa4XAIunNANeNUMGjaagJNAKLNHvIT86L2iTSnSFGhHxw7jpmQzicqM2wfYZw1bRIujO5ikXjbzx0nyHPIk2S2oiEaegz5FikyRBOPWpT9jRDwa/UB5bQlblVrB3Mg9kZYtTYRZo75KcaCdPZZ1izyNRYCKcStRl6HFvtpyoDS8yFcM45lb8m7a9qN7YpUs+iNnSuv+kettGvRZo6jup/hMFM0/3ZwBJjIZzvE090jmOr6MwizYRwyDbWaIZ8/VqkmRDON6e6zJCvnwSEoWjDKcJAE9MTaGBfnqzKRAjn69OwXjPki1lkYibacIra6DZDvr4skpqINuzKZG/puzRsZ3P9pJLFH4sTaPLp+x/tpMIRd2rFwCLwpP+eanu4Byy0f4azHUa3fwGjRo0aNWrUqFGjNOsvHAiIONkUPboAAAAASUVORK5CYII=" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.7</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>44 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹150 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item4************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item4 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dgk4obiml7wgzzlx0twg" alt=""><!-- Food -->
+                        <p><strong>Madhi Ni Khamani</strong></p>
+                        <p><small>Indian, Snacks</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>30 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+        </div><!-- Row over -->
+
+        <div class="row mb-3">
+
+            <!-- *************************************************************************Item1************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item1 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/l7z6xuzelu9zotumvpk5" alt=""><!-- Food -->
+                        <p><strong>Atul Bakery</strong></p>
+                        <p><small>Desserts</small></p>
+                        <div class="d-flex bg-light">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt="">  <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.2</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>26 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹250 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+            
+<!-- *************************************************************************Item2************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item2 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rprjqll7yxg6txyhjrqz" alt=""><!-- Food -->
+                        <p><strong>Mummy Meals</strong></p>
+                        <p><small>North Indian, Home Food, Healthy Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""> <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>42 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item3************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item3 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wivd5l2pzs68tbxyrkqf" alt=""><!-- Food -->
+                        <p><strong>Gangour</strong></p>
+                        <p><small>North Indian, Fast Food, Street Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.7</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>44 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹150 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item4************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item4 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dgk4obiml7wgzzlx0twg" alt=""><!-- Food -->
+                        <p><strong>Madhi Ni Khamani</strong></p>
+                        <p><small>Indian, Snacks</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>30 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+        </div><!-- Row over -->
+
+        <div class="row mb-3">
+
+            <!-- *************************************************************************Item1************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item1 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/l7z6xuzelu9zotumvpk5" alt=""><!-- Food -->
+                        <p><strong>Atul Bakery</strong></p>
+                        <p><small>Desserts</small></p>
+                        <div class="d-flex bg-light">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt="">  <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.2</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>26 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹250 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+            
+<!-- *************************************************************************Item2************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item2 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rprjqll7yxg6txyhjrqz" alt=""><!-- Food -->
+                        <p><strong>Mummy Meals</strong></p>
+                        <p><small>North Indian, Home Food, Healthy Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""> <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>42 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item3************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item3 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wivd5l2pzs68tbxyrkqf" alt=""><!-- Food -->
+                        <p><strong>Gangour</strong></p>
+                        <p><small>North Indian, Fast Food, Street Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.7</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>44 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹150 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item4************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item4 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dgk4obiml7wgzzlx0twg" alt=""><!-- Food -->
+                        <p><strong>Madhi Ni Khamani</strong></p>
+                        <p><small>Indian, Snacks</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>30 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+        </div><!-- Row over -->
+
+        <div class="row mb-3">
+
+            <!-- *************************************************************************Item1************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item1 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/l7z6xuzelu9zotumvpk5" alt=""><!-- Food -->
+                        <p><strong>Atul Bakery</strong></p>
+                        <p><small>Desserts</small></p>
+                        <div class="d-flex bg-light">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt="">  <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.2</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>26 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹250 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+            
+<!-- *************************************************************************Item2************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item2 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rprjqll7yxg6txyhjrqz" alt=""><!-- Food -->
+                        <p><strong>Mummy Meals</strong></p>
+                        <p><small>North Indian, Home Food, Healthy Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""> <!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>4.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>42 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                 <p><a  class="text-danger" href="#"><strong>FREE DELIVERY</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item3************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item3 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wivd5l2pzs68tbxyrkqf" alt=""><!-- Food -->
+                        <p><strong>Gangour</strong></p>
+                        <p><small>North Indian, Fast Food, Street Food</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.7</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>44 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹150 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+
+<!-- *************************************************************************Item4************************************************************************* -->
+            <div class="col-3">
+                <div class="p-2 border">
+                    <div class="item4 m-3 bg-light">
+                        <img class="w-100" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dgk4obiml7wgzzlx0twg" alt=""><!-- Food -->
+                        <p><strong>Madhi Ni Khamani</strong></p>
+                        <p><small>Indian, Snacks</small></p>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-75" src="data:image/png;base64,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" alt=""><!-- Star -->
+                            </div>
+                            <div class="m-auto">
+                                <p><strong>3.3</strong></p>
+                            </div>
+                            <div class="m-auto ">
+                                <p>30 Mins</p>
+                            </div>
+                            <div class="m-auto">
+                                <p>₹200 FOR TWO</p>
+                            </div>
+                        </div><!-- flex div over -->
+                        <hr>
+                        <div class="d-flex">
+                            <div class=" me-0" style="width: 10%;">
+                                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIthARWrx4zSkVJButpZeGL2rBqvq4L_ZXjXHjhohVTdyaL123LLGb21CQbGWxNO-rtnU&usqp=CAU" alt=""><!-- Sale -->
+                            </div>
+                            <div class="my-auto mx-1">
+                                <p><a href=""><a class="text-danger" href="#"><strong>10% off | Use TRYNEW</strong></a></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- col-3 or card over -->
+        </div><!-- Row over -->
+    </div>
+  </nav>
+  </main>
+  <footer style="background-color: black ;">
+    <!-- place footer here -->
+
+    <div class="container d-flex mb-0 border-bottom">
+        <ul class="list-unstyled mx-auto mt-5">
+            <li class="mb-3"><a class="text-light text-decoration-none" href="#">COMPANY</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">About us</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Team</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Careers</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Swiggy Blog</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Bug Bounty</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Swiggy One</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Swiggy Corporate</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Swiggy Instamart</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Swiggie Genie</a></li>
+        </ul>
+        <ul class="list-unstyled mx-auto mt-5">
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">CONTACT</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Help & Support</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Partner with us</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Ride with us</a></li>
+        </ul>
+        <ul class="list-unstyled mx-auto mt-5">
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Legal</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Terms & Conditions</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Refund & Cancellation</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Privacy Policy</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Cookie Policy</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Offer Terms</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="#">Phishing & Fraud</a></li>
+        </ul>
+        <div class="mx-auto">
+            <button class="border-white rounded-4 bg-black d-flex w-75 mb-3 mt-5"><img class="rounded-circle w-25 " src="https://th.bing.com/th/id/OIP.QukU7GnxTAM5UCY8FaN6oAHaHa?w=215&h=215&c=7&r=0&o=5&pid=1.7" alt=""><p class="text-white ps-4 mt-2">Download on the <br> App Store</p></button>
+            <button class="border-white rounded-4 bg-black d-flex w-75"><img class="rounded-circle  w-25" src="https://th.bing.com/th/id/OIP.SgMy2OzvAfAatt2IYA06OwHaHa?w=165&h=180&c=7&r=0&o=5&pid=1.7" alt=""><p class="text-white ps-5 mt-2">GET IT ON <br> Google Play</p></button>
+        </div>
+    </div>
+    <div class="container mt-0 border-bottom">
+        <hr>
+        <ul class="list-unstyled">
+            <li class="mb-4 ms-5"><a class="text-light text-decoration-none" href="">WE DELIVER TO</a></li>
+        </ul>
+        <div class="d-flex mx-auto">
+            <ul class="list-unstyled mx-auto mt-5">
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Abohar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adilabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adoni</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agartala</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agra</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Ahmedabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Abohar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adilabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adoni</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agartala</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agra</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Ahmedabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Abohar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adilabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adoni</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agartala</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agra</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Ahmedabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Abohar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adilabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adoni</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agartala</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agra</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Ahmedabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Abohar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adilabad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Adoni</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agartala</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Agra</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Ahmedabad</a></li>
+            </ul>
+            <ul class="list-unstyled mx-auto mt-5">
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehradun</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehri</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Delhi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Deoghar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dewas</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dhar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehradun</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehri</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Delhi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Deoghar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dewas</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dhar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehradun</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehri</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Delhi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Deoghar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dewas</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dhar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehradun</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehri</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Delhi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Deoghar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dewas</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dhar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehradun</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dehri</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Delhi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Deoghar</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dewas</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Dhar</a></li>
+            </ul>
+            <ul class="list-unstyled mx-auto mt-5">
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kharagpur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishanganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishangarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kochi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohima</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohlapur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kharagpur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishanganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishangarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kochi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohima</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohlapur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kharagpur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishanganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishangarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kochi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohima</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohlapur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kharagpur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishanganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishangarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kochi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohima</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohlapur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kharagpur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishanganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kishangarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kochi</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohima</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Kohlapur</a></li>
+            </ul>
+            <ul  class="list-unstyled mx-auto mt-5">
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pusad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Puttur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pae-Bareli</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raichur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raiganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raigarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pusad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Puttur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pae-Bareli</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raichur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raiganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raigarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pusad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Puttur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pae-Bareli</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raichur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raiganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raigarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pusad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Puttur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pae-Bareli</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raichur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raiganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raigarh</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pusad</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Puttur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Pae-Bareli</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raichur</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raiganj</a></li>
+                <li class="mb-2"><a class="text-light text-decoration-none" href="">Raigarh</a></li>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="container d-flex mt-5 pb-5">
+        <div class="me-auto">
+            <img class="ps-5 ms-5 w-50" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_284/Logo_f5xzza" alt="">
+        </div>
+        <p class="text-white mx-auto">
+            © 2023 Swiggy
+        </p>
+        <div class="d-flex ms-auto">
+            <img class="w-50 me-3" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-facebook_tfqsuc" alt="">
+            <img class="w-50 me-3" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-pinterest_kmz2wd" alt="">
+            <img class="w-50 me-3" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-instagram_b7nubh" alt="">
+            <img class="w-50 me-3" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_48,h_48/icon-twitter_gtq8dv" alt="">
+        </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
